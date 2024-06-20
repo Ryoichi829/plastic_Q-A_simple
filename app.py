@@ -7,9 +7,7 @@ import os
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 os.environ["OPENAI_API_KEY"] = st.secrets.OpenAIAPI.openai_api_key
 
-chat = ChatOpenAI(model="gpt-3.5-turbo")
-
-chat = ChatOpenAI(model="gpt-4o-turbo")
+chat = ChatOpenAI(model="gpt-4o")
 
 # st.session_stateを使いメッセージのやりとりを保存
 if "messages" not in st.session_state:
