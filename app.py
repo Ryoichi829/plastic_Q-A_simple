@@ -38,7 +38,7 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("プラスチックQ＆A")
-st.write("gpt-4o（回答の例示）を使ったチャットボットです。")
+st.write("gpt-4oを使ったチャットボットです。ただし、promptの中に回答例を含んでいます。")
 
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
 
@@ -46,8 +46,8 @@ if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
-        speaker = "🙂"
+        speaker = "user"
         if message.type == "ai":
-            speaker="🤖"
+            speaker="gpt-4o"
 
         st.write(speaker + ": " + message.content)
