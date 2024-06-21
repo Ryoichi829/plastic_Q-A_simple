@@ -38,7 +38,7 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("プラスチックQ＆A")
-st.write("gpt-4oを使ったチャットボットです。ただし、promptの中に回答例を含んでいます。")
+st.write("gpt-4oを使ったチャットボット　―ＱＡ例の追加による出力―")
 
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
 
