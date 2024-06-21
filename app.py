@@ -37,7 +37,7 @@ def communicate():
     st.session_state["user_input"] = ""  # 入力欄を消去
 
 # ユーザーインターフェイスの構築
-st.title("プラスチックQ＆A")
+st.title("プラスチック Ｑ＆Ａ")
 st.write("gpt-4oを使ったチャットボット　―ＱＡ例の追加による出力―")
 
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
